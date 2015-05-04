@@ -18,7 +18,7 @@ var getWhere = function(name, params) {
   if(!options) {
     if(flags && flags.explicit) {
       var dataKeys = Object.keys(data);
-      if(dataKeys.length == 1 && dataKeys.indexOf(toReturn))
+      if(dataKeys.length == 1 && dataKeys.indexOf(toReturn) != -1)
         return data[toReturn];
       else
         return false;
