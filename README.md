@@ -2,7 +2,7 @@
 Simple function for returning object value based on passed options
 
 ## usage
-This script can be imported as module (browserify, systemJS) or if just included in script tag, it can be access globaly (window.getWhere)
+This script can be imported as module (browserify, systemJS) or if just included in script tag, it can be accessed globaly (window.getWhere)
 
 ## examples
 
