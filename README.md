@@ -1,8 +1,8 @@
-# getwhere
+# getWhere
 Simple function for returning object value based on passed options
 
 ## usage
-This will extend Object so it can be accessed with "Object.getWhere()"
+This script can be imported as module (browserify, systemJS) or if just included in script tag, it can be access globaly (window.getWhere)
 
 ## examples
 
@@ -45,19 +45,19 @@ var data = {
 Examples of retrieving data
 
 ```javascript
-Object.getWhere("go_char_right", {data:data, toReturn: "keys"})
+getWhere("go_char_right", {data:data, toReturn: "keys"})
 // return ["Right"]
 
-Object.getWhere("go_char_right", {data:data, toReturn: "keys", options: {os: "mac"} })
+getWhere("go_char_right", {data:data, toReturn: "keys", options: {os: "mac"} })
 // return ["Right"]
 
-Object.getWhere("go_char_right", {data:data, toReturn: "keys", options: {os: "pc"} })
+getWhere("go_char_right", {data:data, toReturn: "keys", options: {os: "pc"} })
 // return false
 
-Object.getWhere("go_char_right", {data:data, toReturn: "keys", flags: {explicit: true} })
+getWhere("go_char_right", {data:data, toReturn: "keys", flags: {explicit: true} })
 // return false
 
-Object.getWhere("go_char_right", {
+getWhere("go_char_right", {
   data:data, 
     toReturn: "keys", 
     options: {os: "mac"}, 
@@ -65,16 +65,16 @@ Object.getWhere("go_char_right", {
 })
 // return ["Right"]
 
-Object.getWhere("go_char_left", {data:data, toReturn: "keys" })
+getWhere("go_char_left", {data:data, toReturn: "keys" })
 // return ["Left"]
 
-Object.getWhere("go_char_left", {data:data, toReturn: "keys", options: {os: "mac"} })
+getWhere("go_char_left", {data:data, toReturn: "keys", options: {os: "mac"} })
 // return ["Left", "Ctrl-B"]
 
-Object.getWhere("go_doc_end", {data:data, toReturn: "keys", options: {os: "mac"} })
+getWhere("go_doc_end", {data:data, toReturn: "keys", options: {os: "mac"} })
 // return ["Cmd-Down", "Cmd-End", "Ctrl-Down"]
 
-Object.getWhere("go_doc_end", {
+getWhere("go_doc_end", {
   data:data, 
     toReturn: "keys", 
     options: {os: "mac", extension: "html"} 
