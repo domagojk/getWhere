@@ -1,4 +1,4 @@
-var getWhere = function(name, params) {
+Object.prototype.getWhere = function(name, params) {
   var options = params.options;
   var flags = params.flags;
   var data = params.data;
@@ -91,8 +91,3 @@ var getWhere = function(name, params) {
   
   return getValue(data);
 };
-
-if (typeof exports == "object" && typeof module == "object")
-  module.exports = getWhere;
-else
-  window.getWhere = getWhere;

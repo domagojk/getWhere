@@ -1,6 +1,9 @@
 # getwhere
 Simple function for returning object value based on passed options
 
+## usage
+This will extend Object so it can be accessed with "Object.getWhere()"
+
 ## examples
 
 Object for extracting data
@@ -42,19 +45,19 @@ var data = {
 Examples of retrieving data
 
 ```javascript
-getWhere("go_char_right", {data:data, toReturn: "keys"})
+Object.getWhere("go_char_right", {data:data, toReturn: "keys"})
 // return ["Right"]
 
-getWhere("go_char_right", {data:data, toReturn: "keys", options: {os: "mac"} })
+Object.getWhere("go_char_right", {data:data, toReturn: "keys", options: {os: "mac"} })
 // return ["Right"]
 
-getWhere("go_char_right", {data:data, toReturn: "keys", options: {os: "pc"} })
+Object.getWhere("go_char_right", {data:data, toReturn: "keys", options: {os: "pc"} })
 // return false
 
-getWhere("go_char_right", {data:data, toReturn: "keys", flags: {explicit: true} })
+Object.getWhere("go_char_right", {data:data, toReturn: "keys", flags: {explicit: true} })
 // return false
 
-getWhere("go_char_right", {
+Object.getWhere("go_char_right", {
   data:data, 
     toReturn: "keys", 
     options: {os: "mac"}, 
@@ -62,16 +65,16 @@ getWhere("go_char_right", {
 })
 // return ["Right"]
 
-getWhere("go_char_left", {data:data, toReturn: "keys" })
+Object.getWhere("go_char_left", {data:data, toReturn: "keys" })
 // return ["Left"]
 
-getWhere("go_char_left", {data:data, toReturn: "keys", options: {os: "mac"} })
+Object.getWhere("go_char_left", {data:data, toReturn: "keys", options: {os: "mac"} })
 // return ["Left", "Ctrl-B"]
 
-getWhere("go_doc_end", {data:data, toReturn: "keys", options: {os: "mac"} })
+Object.getWhere("go_doc_end", {data:data, toReturn: "keys", options: {os: "mac"} })
 // return ["Cmd-Down", "Cmd-End", "Ctrl-Down"]
 
-getWhere("go_doc_end", {
+Object.getWhere("go_doc_end", {
   data:data, 
     toReturn: "keys", 
     options: {os: "mac", extension: "html"} 
