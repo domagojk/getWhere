@@ -1,11 +1,21 @@
-var getWhere = function(name, params) {
+var getWhere = function(name, toReturn, data, params) {
+
+  if(!params)
+    params = {};
+  
   var options = params.options;
   var flags = params.flags;
-  var data = params.data;
-  var toReturn = params.toReturn;
 
   if(typeof name != 'string') {
     throw new Error("Invalid preference name");
+  }
+
+  if(typeof toReturn != 'string') {
+    throw new Error("Invalid return parameter");
+  }
+
+  if(typeof data != 'object') {
+    throw new Error("Invalid data parameter");
   }
 
   data = data[name];

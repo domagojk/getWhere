@@ -45,39 +45,35 @@ var data = {
 Examples of retrieving data
 
 ```javascript
-getWhere("go_char_right", {data:data, toReturn: "keys"})
+getWhere("go_char_right", "keys", data)
 // return ["Right"]
 
-getWhere("go_char_right", {data:data, toReturn: "keys", options: {os: "mac"} })
+getWhere("go_char_right", "keys", data, {options: {os: "mac"} })
 // return ["Right"]
 
-getWhere("go_char_right", {data:data, toReturn: "keys", options: {os: "pc"} })
+getWhere("go_char_right", "keys", data, {options: {os: "pc"} })
 // return false
 
-getWhere("go_char_right", {data:data, toReturn: "keys", flags: {explicit: true} })
+getWhere("go_char_right", "keys", data, {flags: {explicit: true} })
 // return false
 
-getWhere("go_char_right", {
-  data:data, 
-    toReturn: "keys", 
-    options: {os: "mac"}, 
-    flags: {explicit: true} 
+getWhere("go_char_right", "keys", data, {
+  options: {os: "mac"}, 
+  flags: {explicit: true} 
 })
 // return ["Right"]
 
-getWhere("go_char_left", {data:data, toReturn: "keys" })
+getWhere("go_char_left", "keys", data)
 // return ["Left"]
 
-getWhere("go_char_left", {data:data, toReturn: "keys", options: {os: "mac"} })
+getWhere("go_char_left", "keys", data, {options: {os: "mac"} })
 // return ["Left", "Ctrl-B"]
 
-getWhere("go_doc_end", {data:data, toReturn: "keys", options: {os: "mac"} })
+getWhere("go_doc_end", "keys", data, {options: {os: "mac"} })
 // return ["Cmd-Down", "Cmd-End", "Ctrl-Down"]
 
-getWhere("go_doc_end", {
-  data:data, 
-    toReturn: "keys", 
-    options: {os: "mac", extension: "html"} 
+getWhere("go_doc_end", "keys", data, { 
+  options: {os: "mac", extension: "html"} 
 })
 // return ["Ctrl-H"]
 ```
