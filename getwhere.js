@@ -76,7 +76,7 @@ var getWhere = function(name, toReturn, data, params) {
 
       if(typeof data[key] == 'string') {
         // if key filter is string only check if it is the same as in options
-        if(data[key] != options[key]) {
+        if(data[key].toLowerCase() != options[key].toLowerCase()) {
           returnKeys = false;
           break;
         }
